@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Insurance Bill</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Prediction of Bike Rental  </h1>
+    <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('main')}}"method="POST">
+        <input type="number" name="temperature" placeholder="Temperature" required="required" /><br>
+    	<input type="number" name="humidity" placeholder="Humidity" required="required" /><br>
+        <input type="number" name="windspeed" placeholder="Windspeed" required="required" /><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+
+  {{pred}}
+  <br>
+  <br>
+
+  <address>
+  Written by <a href="mailto:jaiprakash1981@gmail.com">Jaiprakash Prajapati</a>.<br>
+  Visit Profile:<a href="https://github.com/jaypeeml">GitHub</a><br>
+  Visit Profile:<a href="https://www.linkedin.com/in/jaiprakashprajapati/">Linkedin</a><br>
+  </address>
+
+ </div>
+
+</body>
+</html>
